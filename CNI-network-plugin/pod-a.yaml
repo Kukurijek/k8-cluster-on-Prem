@@ -1,0 +1,14 @@
+# pod-a.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-a
+  labels:
+    app: client
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: ["sleep", "3600"]
+  nodeSelector:
+    kubernetes.io/hostname: node01
